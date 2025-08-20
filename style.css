@@ -1,401 +1,301 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&display=swap');
+/* Fuentes y Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-:root {
-    --primary-color: #5865F2;
-    /* Azul Discord */
-    --accent-color: #7289DA;
-    --dark-bg: #2C2F33;
-    --darker-bg: #23272A;
-    --text-color: #b7b7b7;
-    --gradient-panel: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    --dark-bg-optional: #0F172A;
-    --accent-color: #6366F1;
-    /* Indigo-500 */
-    --accent-hover: #4F46E5;
-    /* Indigo-600 */
-}
-
-
-body {
-    background-color: var(--dark-bg-optional);
-    color: var(--text-color);
-    font-family: 'Poppins', sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f8; /* Color de fondo claro mate */
+    color: #1E1E2F; /* Azul oscuro para texto principal */
+    line-height: 1.6;
+}
+
+/* HEADER */
 header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: #1E2A78; /* Azul principal */
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 header img {
-    height: 100px;
-    width: 100px;
-    border-radius: 20px;
-    margin: 10px;
+    height: 50px;
 }
 
-ul {
-    color: var(--text-color);
-    list-style: none;
+header h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
     display: flex;
-    gap: 20px;
-    margin-right: 20px;
+    gap: 2rem;
+    list-style: none;
 }
 
-ul li {
+nav a {
     text-decoration: none;
-    padding: 10px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
-ul li a {
-    color: var(--text-color);
-    text-decoration: none;
+nav a:hover {
+    color: #FFD700; /* Amarillo fuerte para resaltar */
+    transform: scale(1.05);
 }
 
-ul li:hover {
-    background-color: var(--accent-hover);
-    transform: scaleX(1.1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
-    transition: all 0.5s ease;
-}
-
-h1 {
-    text-align: center;
-}
-
-a {
-    color: var(--text-color);
-    text-decoration: none;
-}
-
+/* PANEL PRINCIPAL */
 .panel {
-    background-color: var(--dark-bg-optional);
-    padding: 10vh;
-    margin: 10px;
-    border-radius: 26px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: var(--text-color);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
-}
-
-.container-projects {
-    background-color: var(--dark-bg-optional);
-    padding: 10vh;
+    gap: 3rem;
     margin: 10px;
     border-radius: 26px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-color);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    padding: 5rem 3rem;
+    background-color: #f5ecec; /* Fondo claro mate */
 }
 
 .panel h1 {
-    text-shadow: 0 0 10px var(--primary-color);
-    margin: 0;
+    font-weight: 700;
+    color: #1E2A78;
+    margin-bottom: 0.5rem;
 }
 
-.tecnologias {
-    background-color: var(--dark-bg-optional);
-    padding: 0vh 5vw;
+.panel p, .panel h4 {
+    margin-top: 1rem;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+    max-width: 700px;
+}
+
+/* REDES SOCIALES */
+.redes-sociales {
+    margin: 1rem 0;
     display: flex;
-    /* o usa grid si prefieres */
-    flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.5rem;
+}
+.redes-sociales a {
+    background-color: #1E1E2F; /* color del círculo */
+    border-radius: 26px;        /* círculo perfecto */
+    width: 52px;               /* doble del radio que quieres, 26px */
+    height: 52px;
+    display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.2);
+    background-color: #1E2A78; /* color de hover */
+}
+
+.redes-sociales a img {
+    width: 24px;  /* icono centrado dentro del círculo */
+    height: 24px;
+    object-fit: contain;
+}
+
+/* TECNOLOGÍAS Y HABILIDADES */
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .tecnologias img {
-    background-color: #1e293b;
-    /* un gris azulado más elegante */
-    height: 80px;
-    width: 100px;
-    padding: 10px;
-    border-radius: 20px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s;
 }
 
 .tecnologias img:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
-    /* color tipo Discord */
+    transform: scale(1.2);
 }
-
-.redes-sociales img {
-    background-color: #1e293b;
-    /* un gris azulado más elegante */
-    height: 20px;
-    width: 25px;
+.card-tecnologies{
+    background-color:#ffffff ;
+    border-radius: 26px;
     padding: 10px;
-    border-radius: 5px;
-    object-fit: contain;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.redes-sociales img:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
-    /* color tipo Discord */
+/* SECCIÓN DE PROYECTOS - GRID 3x3 */
+.container-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 columnas si hay espacio */
+    gap: 2rem;
+    padding: 2rem 3rem;
+    max-width: 1200px; /* Limita ancho para centrar todo */
+    margin: 0 auto;
 }
 
 .project-card {
-    background-color: #1e293b;
-    border-radius: 20px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    color: white;
-    transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: column; /* Imagen arriba, contenido abajo */
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
-    transform: scale(1.01);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .project-image {
-    position: relative;
+    width: 100%;
+    height: 220px;
+    border-radius: 24px; /* Altura vertical uniforme */
     overflow: hidden;
-    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+    position: relative;
     cursor: pointer;
 }
 
 .project-image img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-    filter: brightness(0.7);
-    transition: filter 0.3s ease;
+    border-bottom: 3px solid #FFD700; /* Detalle amarillo */
+    transition: transform 0.3s;
 }
 
 .project-image:hover img {
-    filter: brightness(0.9) blur(1px);
+    transform: scale(1.05);
 }
 
-.image-overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem;
-    font-size: 0.9rem;
+.project-title {
+    color: #1E2A78;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 1rem;
 }
 
 .project-description {
-    margin-top: 1rem;
-    font-size: 1rem;
+    color: #333;
+    margin: 0 1rem 1rem 1rem;
+    font-size: 0.95rem;
     line-height: 1.4;
 }
 
 .project-tags {
-    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 1rem 1rem 1rem;
 }
 
 .project-tags span {
-    display: inline-block;
-    background-color: #334155;
-    color: #64ca89;
-    padding: 0.3rem 0.6rem;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.3rem;
+    background-color: #FFD700;
+    color: #1E2A78;
+    padding: 0.35rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
-.github-link {
-    display: block;
-    margin-top: 1rem;
-    color: var(--accent);
+/* Responsive: adapta a menos columnas en pantallas pequeñas */
+@media (max-width: 1000px) {
+    .container-projects {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
+
+@media (max-width: 650px) {
+    .container-projects {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #1E2A78;
+    color: #fff;
+    padding: 3rem;
+    text-align: center;
+}
+
+footer a {
+    color: #FFD700;
+    margin: 0 0.5rem;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-.github-link:hover {
+footer a:hover {
     text-decoration: underline;
 }
 
-/* MODAL CARRUSEL */
+/* MODAL DEL CARRUSEL */
 .carousel-modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(15, 23, 42, 0.9);
+    background-color: rgba(30, 42, 120, 0.95);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     z-index: 999;
 }
 
 .carousel-modal img {
     max-width: 90%;
     max-height: 70vh;
-    border-radius: 12px;
-    box-shadow: 0 0 20px black;
-}
-
-.carousel-controls {
-    margin-top: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 0 25px black;
 }
 
 .carousel-controls button {
-    background-color: #5865F2;
+    background-color: #FFD700;
     border: none;
-    padding: 0.6rem 1.2rem;
+    padding: 0.6rem 1.3rem;
     font-size: 1.2rem;
-    color: white;
+    color: #1E2A78;
+    font-weight: 600;
     border-radius: 8px;
     margin: 0 0.5rem;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 .carousel-controls button:hover {
-    background-color: #4F46E5;
+    background-color: #FFC107;
+}
+
+.hidden {
+    display: none;
 }
 
 .close-btn {
     position: absolute;
-    top: 20px;
-    right: 40px;
+    top: 2rem;
+    right: 2rem;
     font-size: 2rem;
-    color: white;
+    color: #FFD700;
     cursor: pointer;
-}
-
-.hidden {
-    display: none;
-}
-
-.site-footer {
-    background-color: #1e293b;
-    color: #cbd5e1;
-    text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 3rem;
-    border-top: 1px solid #334155;
-    font-size: 0.9rem;
-}
-
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.footer-links {
-    margin-top: 1rem;
-}
-
-.footer-links a {
-    color: var(--accent);
-    margin: 0 1rem;
-    text-decoration: none;
-    font-weight: 500;
     transition: color 0.3s;
 }
 
-.footer-links a:hover {
-    color: var(--hover);
-}
-
-.blog-section {
-    padding: 2rem 0;
-}
-
-.blog-card {
-    background-color: #1e293b;
-    padding: 1.5rem;
-    margin: 10px;
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    color: white;
-}
-
-.blog-card a {
-    color: var(--accent);
-    text-decoration: none;
-}
-
-.blog-card a:hover {
-    text-decoration: underline;
-}
-
-.hidden {
-    display: none;
-}
-
-.blog-section,
-.article-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    color: white;
-}
-
-.blog-card {
-    background-color: #1e293b;
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.blog-card a {
-    color: var(--accent);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.blog-card a:hover {
-    text-decoration: underline;
-}
-
-.article-content h2 {
-    margin-top: 1.5rem;
-    color: var(--accent);
-}
-
-.article-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
-.article-content pre {
-    background-color: #0f172a;
-    color: #e2e8f0;
-    padding: 1rem;
-    overflow-x: auto;
-    border-radius: 8px;
-    margin: 1rem 0;
-}
-
-.article-content h2 {
-    margin-top: 2rem;
-    color: var(--accent-color);
-}
-
-.article-content a {
-    color: var(--accent-color);
-    font-weight: 600;
-    text-decoration: none;
+.close-btn:hover {
+    color: #fff;
 }
