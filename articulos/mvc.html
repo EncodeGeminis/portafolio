@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>¿Qué es MVC? - Notas Técnicas</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header>
+    <h1>¿Qué es MVC?</h1>
+    <nav>
+      <a href="../blog.html">← Volver a artículos</a>
+    </nav>
+  </header>
+
+  <main class="article-content">
+    <p>
+      El patrón MVC (Modelo-Vista-Controlador) es una arquitectura que separa la lógica de negocio, la presentación
+      y el control de flujo en aplicaciones.
+    </p>
+
+    <h2>🔧 1. Modelo</h2>
+    <p>
+      El modelo representa la lógica del negocio y los datos de la aplicación. Por ejemplo, en una app de usuarios,
+      la clase `Usuario` es parte del modelo.
+    </p>
+
+    <pre><code class="language-java">
+// Modelo en Java
+public class Usuario {
+    private String nombre;
+    private int edad;
+
+    // Getters y setters
+}
+    </code></pre>
+
+    <h2>🖥️ 2. Vista</h2>
+    <p>
+      Es la interfaz con la que interactúa el usuario. En aplicaciones web, normalmente es HTML, Thymeleaf o algún framework frontend.
+    </p>
+
+    <h2>🧠 3. Controlador</h2>
+    <p>
+      El controlador gestiona las peticiones del usuario, actualiza el modelo y decide qué vista mostrar.
+    </p>
+
+    <pre><code class="language-java">
+// Controlador en Spring Boot
+@Controller
+public class UsuarioController {
+    @GetMapping("/usuarios")
+    public String mostrarUsuarios(Model model) {
+        model.addAttribute("usuarios", usuarioService.obtenerTodos());
+        return "usuarios";
+    }
+}
+    </code></pre>
+
+    <h2>🎯 Conclusión</h2>
+    <p>
+      MVC mejora la organización del código y facilita el mantenimiento de las aplicaciones.
+      Es ampliamente utilizado en frameworks como Spring, Angular y ASP.NET.
+    </p>
+  </main>
+</body>
+</html>

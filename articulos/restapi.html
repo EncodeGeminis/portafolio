@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>API REST con Spring Boot</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header>
+    <h1>Crear una API REST con Spring Boot</h1>
+    <nav>
+      <a href="../blog.html">← Volver a artículos</a>
+    </nav>
+  </header>
+
+  <main class="article-content">
+    <p>Una API REST permite la comunicación entre sistemas mediante solicitudes HTTP como GET, POST, PUT y DELETE.</p>
+
+    <h2>🛠️ ¿Qué necesitas?</h2>
+    <ul>
+      <li>Java 17+</li>
+      <li>Spring Boot Starter Web</li>
+      <li>IDE como IntelliJ o VS Code</li>
+    </ul>
+
+    <h2>🔧 Estructura básica del controlador</h2>
+    <pre><code class="language-java">
+@RestController
+@RequestMapping("/api/usuarios")
+public class UsuarioController {
+
+    @GetMapping
+    public List<Usuario> listar() {
+        return usuarioService.obtenerTodos();
+    }
+
+    @PostMapping
+    public Usuario guardar(@RequestBody Usuario usuario) {
+        return usuarioService.guardar(usuario);
+    }
+
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable Long id) {
+        usuarioService.eliminar(id);
+    }
+}
+    </code></pre>
+
+    <h2>🧪 Prueba con Postman</h2>
+    <p>
+      Puedes probar tus endpoints con <a href="https://www.postman.com/" target="_blank">Postman</a> o con una app frontend.
+    </p>
+
+    <h2>✅ Conclusión</h2>
+    <p>
+      Spring Boot simplifica la creación de APIs REST con anotaciones claras y un flujo de desarrollo rápido. Ideal para backends modernos.
+    </p>
+  </main>
+</body>
+</html>

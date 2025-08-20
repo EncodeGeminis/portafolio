@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="media/logo.png" alt="">
+        <h1>Portafolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="blog.html">Vlogs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="panel">
+            <div>
+                <h1>Welcome</h1> <br>
+                <h1>My name is Uriel Cisneros</h1>
+                <h1>back-end developer</h1>
+
+                <div class="redes-sociales">
+                    <a href="https://github.com/EncodeGeminis"><img src="media/logo_git_hub.png" alt=""></a>
+                    <a href="https://www.linkedin.com/in/jorge-uriel-cisneros-martinez-8104a3252/"><img
+                            src="media/logo_linked_in.png" alt=""></a>
+                    <a href="https://www.instagram.com/rx.blake?igsh=cTdqNm5lcXN5YTht"><img
+                            src="media/logo_instagram.png" alt=""></a>
+                </div>
+
+                <h4>I am a developer with solid training in Computer Science. I focus on building functional, scalable
+                    and quality solutions,
+                    maintaining a modern design. Passionate about learning and solving problems through good programming
+                    and
+                    thinking practices
+                    analytical.</h4>
+            </div>
+
+            <div>
+                <h1>Habilities</h1>
+                <div class="tecnologias">
+
+                    <img src="media/logo_java.png" alt="">
+                    <img src="media/logo_spring.png" alt="">
+                    <img src="media/logo_html.png" alt="">
+                    <img src="media/logo_css.png" alt="">
+                    <img src="media/logo_js.png" alt="">
+                    <img src="media/logo_mysql.png" alt="">
+                    <img src="media/logo_bootstrap.png" alt="">
+                    <img src="media/logo_git.png" alt="">
+                </div>
+            </div>
+            <div class="tecnologias">
+                <h1>Lenguages</h1>
+                <h4>Español - Nativo, Ingles - Intermedio</h4>
+
+            </div>
+        </div>
+        <h1>My proyects</h1>
+        <div class="container-projects">
+
+            <div class="project-card">
+                <h3 class="project-title">Spring crud</h3>
+                <div class="project-image" onclick="openCarousel('spring')">
+                    <img src="media/spring/crud_1.png" alt="spring">
+                    <div class="image-overlay"> ver mas imagenes</div>
+                </div>
+
+                <p class="project-description">Descripcion del proyecto</p>
+
+                <div class="project-tags">
+                    <span>Java</span>
+                    <span>Springboot</span>
+                    <span>Mysql</span>
+                    <span>HTML/ CSS</span>
+                </div>
+                <a href="https://github.com/EncodeGeminis/spring-crud">ver repositorio</a>
+
+            </div>
+            <div class="project-card">
+                <h3 class="project-title">App con Android studio</h3>
+                <div class="project-image" onclick="openCarousel('android')">
+                    <img src="media/android/android_1.jpeg" alt="proyecto1">
+                    <div class="image-overlay"> ver mas imagenes</div>
+                </div>
+
+                <p class="project-description">Descripcion del proyecto</p>
+
+                <div class="project-tags">
+                    <span>Java</span>
+                    <span>Firebase</span>
+                </div>
+                <a href="https://github.com/EncodeGeminis/ApiRest">ver repositorio</a>
+
+            </div>
+
+            
+            
+            <div class="project-card">
+                <h3 class="project-title">English web app</h3>
+                <div class="project-image" onclick="openCarousel('englishApp')">
+                    <img src="media/englishApp/english_1.png" alt="proyecto1">
+                    <div class="image-overlay"> ver mas imagenes</div>
+                </div>
+
+                <p class="project-description">Hice una pagina web para la visualizacion y repaso
+                    de los temas fundamentales del idioma ingles, utilizando tecnologias de diseño web, 
+                    la incorporacion de html, css y javascript con el almacenamiento local en archivos .json.
+                </p>
+
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Javascript</span>
+                    <span>JSON</span>
+                </div>
+                <a href="https://github.com/EncodeGeminis/EnglishWebApp">ver repositorio</a>
+
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Java projects</h3>
+                <div class="project-image" onclick="openCarousel('javaProjects')">
+                    <img src="media/java/java_1.png" alt="javaProjects">
+                    <div class="image-overlay"> ver mas imagenes</div>
+                </div>
+
+                <p class="project-description">Codigos escenciales en lenguaje java.</p>
+
+                <div class="project-tags">
+                    <span>Java</span>
+                </div>
+                <a href="https://github.com/EncodeGeminis/JavaProjects">ver repositorio</a>
+
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Spring Security</h3>
+                <div class="project-image" onclick="openCarousel('springSecurity')">
+                    <img src="media/spring_security/spring_security_1.png" alt="proyecto1">
+                    <div class="image-overlay"> ver mas imagenes</div>
+                </div>
+
+                <p class="project-description">Descripcion del proyecto</p>
+
+                <div class="project-tags">
+                    <span>Java</span>
+                    <span>Bootstrap</span>
+                    <span>Springboot</span>
+                    <span>Mysql</span>
+                    <span>HTML/ CSS</span>
+                </div>
+                <a href="https://github.com/EncodeGeminis/SpringSecurity">ver repositorio</a>
+
+            </div>
+
+        </div>
+
+        <!-- MODAL DEL CARRUSEL -->
+        <div id="carousel-modal" class="carousel-modal hidden">
+            <span class="close-btn" onclick="closeCarousel()">&times;</span>
+            <img id="carousel-img" src="" alt="Imagen del proyecto" />
+            <div class="carousel-controls">
+                <button onclick="prevImage()">←</button>
+                <button onclick="nextImage()">→</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>© 2025 Uriel Cisneros · Back-End Developer</p>
+            <div class="footer-links">
+                <a href="https://github.com/EncodeGeminis" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/jorge-uriel-cisneros-martinez-8104a3252/"
+                    target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

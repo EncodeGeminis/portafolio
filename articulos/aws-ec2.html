@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Subir backend a AWS EC2</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header>
+    <h1>Sube tu backend a AWS EC2</h1>
+    <nav>
+      <a href="../blog.html">← Volver a artículos</a>
+    </nav>
+  </header>
+
+  <main class="article-content">
+    <p>
+      Amazon EC2 permite alojar servidores virtuales para ejecutar tus apps backend.
+    </p>
+
+    <h2>🧰 Requisitos</h2>
+    <ul>
+      <li>Cuenta en AWS</li>
+      <li>Llave PEM descargada</li>
+      <li>Jar de tu proyecto Spring</li>
+    </ul>
+
+    <h2>🔌 Pasos rápidos</h2>
+    <ol>
+      <li>Crea una instancia EC2 (Amazon Linux o Ubuntu)</li>
+      <li>Conéctate por SSH con la llave</li>
+      <li>Instala Java: <code>sudo apt install openjdk-17-jdk</code></li>
+      <li>Sube tu .jar con <code>scp</code> o Git</li>
+      <li>Corre con: <code>java -jar app.jar</code></li>
+    </ol>
+
+    <h2>🌐 Abre el puerto 8080</h2>
+    <p>Desde el panel de Seguridad → Grupos → Reglas de entrada.</p>
+
+    <h2>✅ Conclusión</h2>
+    <p>
+      EC2 te da control total sobre el despliegue. Es ideal para aprender a administrar entornos reales.
+    </p>
+  </main>
+</body>
+</html>

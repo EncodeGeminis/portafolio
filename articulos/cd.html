@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>¿Qué es Continuous Delivery?</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header>
+    <h1>¿Qué es Continuous Delivery?</h1>
+    <nav>
+      <a href="../blog.html">← Volver a artículos</a>
+    </nav>
+  </header>
+
+  <main class="article-content">
+    <p>Continuous Delivery (CD) es una práctica donde cada cambio en el código puede ser desplegado automáticamente en producción.</p>
+
+    <h2>🔁 CI vs CD</h2>
+    <ul>
+      <li><strong>CI:</strong> Automatiza pruebas y builds</li>
+      <li><strong>CD:</strong> Automatiza el deploy</li>
+    </ul>
+
+    <h2>🛠️ Herramientas comunes</h2>
+    <ul>
+      <li>GitHub Actions</li>
+      <li>GitLab CI/CD</li>
+      <li>Jenkins</li>
+    </ul>
+
+    <h2>🚀 Ejemplo: GitHub Actions</h2>
+    <pre><code class="language-yaml">
+name: Build and Deploy
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: mvn clean install
+    </code></pre>
+
+    <h2>✅ Conclusión</h2>
+    <p>Con CD ganas velocidad y seguridad en los despliegues, ideal para equipos ágiles y startups.</p>
+  </main>
+</body>
+</html>

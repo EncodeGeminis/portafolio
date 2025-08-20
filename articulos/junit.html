@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>¿Qué es JUnit?</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header>
+    <h1>¿Qué son las pruebas unitarias?</h1>
+    <nav>
+      <a href="../blog.html">← Volver a artículos</a>
+    </nav>
+  </header>
+
+  <main class="article-content">
+    <p>
+      Las pruebas unitarias validan que las partes pequeñas de tu código funcionen como se espera.
+    </p>
+
+    <h2>🔧 ¿Qué es JUnit?</h2>
+    <p>Es el framework de testing más popular en Java. Viene integrado en Spring Boot con Spring Test.</p>
+
+    <h2>🧪 Ejemplo simple</h2>
+    <pre><code class="language-java">
+public class Calculadora {
+    public int suma(int a, int b) {
+        return a + b;
+    }
+}
+
+@Test
+public void testSuma() {
+    Calculadora calc = new Calculadora();
+    assertEquals(5, calc.suma(2, 3));
+}
+    </code></pre>
+
+    <h2>⚙️ En Spring Boot</h2>
+    <pre><code class="language-java">
+@SpringBootTest
+public class UsuarioServiceTest {
+    @Autowired
+    UsuarioService usuarioService;
+
+    @Test
+    void testGuardarUsuario() {
+        Usuario nuevo = new Usuario("Juan", 20);
+        Usuario guardado = usuarioService.guardar(nuevo);
+        assertNotNull(guardado.getId());
+    }
+}
+    </code></pre>
+
+    <h2>✅ Conclusión</h2>
+    <p>
+      Con pruebas unitarias detectas errores antes, automatizas validaciones y mejoras la confianza en tus cambios.
+    </p>
+  </main>
+</body>
+</html>
