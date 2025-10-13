@@ -51,29 +51,51 @@ const imagesByProject = {
 let currentProject = "";
 let currentIndex = 0;
 
+const carouselModal = document.getElementById("carousel-modal");
+const carouselImg = document.getElementById("carousel-img");
+
+/* 🔹 Abrir el carrusel */
 function openCarousel(projectName) {
     currentProject = projectName;
     currentIndex = 0;
-    document.getElementById("carousel-img").src = imagesByProject[projectName][currentIndex];
-    document.getElementById("carousel-modal").classList.remove("hidden");
+    carouselImg.src = imagesByProject[projectName][currentIndex];
+    carouselModal.classList.remove("hidden");
 }
 
+/* 🔹 Cerrar el carrusel */
 function closeCarousel() {
-    document.getElementById("carousel-modal").classList.add("hidden");
+    carouselModal.classList.add("hidden");
 }
 
+/* 🔹 Navegación entre imágenes */
 function nextImage() {
     const images = imagesByProject[currentProject];
     currentIndex = (currentIndex + 1) % images.length;
-    document.getElementById("carousel-img").src = images[currentIndex]; // ✅
+    carouselImg.src = images[currentIndex];
 }
 
 function prevImage() {
     const images = imagesByProject[currentProject];
     currentIndex = (currentIndex - 1 + images.length) % images.length;
-    document.getElementById("carousel-img").src = images[currentIndex]; // ✅
+    carouselImg.src = images[currentIndex];
 }
 
+/* 🔹 Cerrar al hacer clic fuera de la imagen */
+carouselModal.addEventListener("click", (event) => {
+    // Si el clic fue directamente sobre el fondo (no en la imagen ni en botones)
+    if (event.target === carouselModal) {
+        closeCarousel();
+    }
+});
+
+/* 🔹 (Opcional) cerrar con tecla ESC */
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !carouselModal.classList.contains("hidden")) {
+        closeCarousel();
+    }
+});
+
+/* 🔹 Alternar lista del blog */
 function toggleBlogList() {
     document.getElementById("blog-list").classList.toggle("hidden");
 }

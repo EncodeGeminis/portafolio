@@ -1,74 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Notas Técnicas - Uriel Cisneros</title>
+    <title>Vlogs - Uriel Cisneros</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0f1116;
+            color: #f3f3f3;
+            margin: 0;
+        }
 
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #14171f;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #222;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        header h1 {
+            font-size: 1.4rem;
+            color: #f9f9f9;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4da3ff;
+        }
+
+        main.blog-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem 3rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .blog-card {
+            background: #1a1d26;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.3s;
+            border: 1px solid #2c2f38;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            border-color: #4da3ff;
+        }
+
+        .blog-card h2 {
+            color: #4da3ff;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card p {
+            color: #cfd2dc;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .blog-card a {
+            color: #4da3ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .blog-card a:hover {
+            color: #82c3ff;
+        }
+
+        footer.site-footer {
+            background: #14171f;
+            padding: 1.5rem;
+            text-align: center;
+            color: #999;
+            border-top: 1px solid #222;
+            margin-top: 3rem;
+        }
+
+        .footer-links a {
+            color: #4da3ff;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
 <body>
     <header>
-        <img src="media/logo.png" alt="">
-        <h1>Notas Tecnicas </h1>
+        <img src="media/logo.png" alt="Logo">
+        <h1>Vlogs</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Portafolio</a></li>
+                <li><a href="notas.html">Notas</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="blog.html">Vlogs</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="blog-section">
         <div class="blog-card">
-            <h2>1. ¿Qué es MVC?</h2>
-            <p>Exploramos el patrón Modelo-Vista-Controlador con ejemplos en Spring Boot.</p>
-            <a href="articulos/mvc.html">Leer artículo →</a>
+            <h2>📹 Introducción a mi portafolio</h2>
+            <p>Una breve presentación sobre mi trayectoria y proyectos más destacados.</p>
+            <a href="vlogs/intro.html">Ver vlog →</a>
         </div>
 
         <div class="blog-card">
-            <h2>2. Crear una API REST en Spring</h2>
-            <p>Guía paso a paso para crear tu primera API RESTful con Java y Spring Boot.</p>
-            <a href="articulos/restapi.html">Leer artículo →</a>
+            <h2>💡 Consejos para programadores</h2>
+            <p>Algunos tips que me ayudaron a mejorar mi flujo de trabajo y productividad.</p>
+            <a href="vlogs/tips.html">Ver vlog →</a>
         </div>
 
         <div class="blog-card">
-            <h2>3. Listas, Pilas y HashMaps en Java</h2>
-            <p>¿Qué estructura usar y cuándo? Aplicaciones prácticas para entrevistas.</p>
-            <a href="articulos/estructuras.html">Leer artículo →</a>
+            <h2>☕ Mi entorno de desarrollo</h2>
+            <p>Cómo configuro mis herramientas para trabajar con Java, Spring y Android.</p>
+            <a href="vlogs/setup.html">Ver vlog →</a>
         </div>
 
         <div class="blog-card">
-            <h2>4. ¿Qué es Continuous Delivery?</h2>
-            <p>Diferencias con integración continua y cómo automatizar tus despliegues.</p>
-            <a href="articulos/cd.html">Leer artículo →</a>
-        </div>
-
-        <div class="blog-card">
-            <h2>5. Subiendo tu backend a la nube con EC2</h2>
-            <p>Primeros pasos en AWS EC2 para subir tu API de Spring Boot.</p>
-            <a href="articulos/aws-ec2.html">Leer artículo →</a>
-        </div>
-
-        <div class="blog-card">
-            <h2>6. ¿Qué son las pruebas unitarias?</h2>
-            <p>Escribe pruebas simples con JUnit para asegurar la calidad de tu código.</p>
-            <a href="articulos/junit.html">Leer artículo →</a>
+            <h2>🚀 Cómo empecé en desarrollo</h2>
+            <p>Una historia personal sobre cómo descubrí mi pasión por la programación.</p>
+            <a href="vlogs/historia.html">Ver vlog →</a>
         </div>
     </main>
-</body>
- <footer class="site-footer">
+
+    <footer class="site-footer">
         <div class="footer-content">
             <p>© 2025 Uriel Cisneros · Back-End Developer</p>
             <div class="footer-links">
                 <a href="https://github.com/EncodeGeminis" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/jorge-uriel-cisneros-martinez-8104a3252/"
-                    target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/jorge-uriel-cisneros-martinez-8104a3252/" target="_blank">LinkedIn</a>
             </div>
         </div>
     </footer>
-
+</body>
 </html>

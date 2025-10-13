@@ -1,71 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Uriel Cisneros</title>
+  <link rel="stylesheet" href="style.css">
+  
 </head>
 
 <body>
-    <header class="header">
-  <div class="logo-container">
-    <img src="media/logo.png" alt="Logo" class="logo">
-    <h1>Uriel Cisneros Martínez</h1>
-  </div>
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="blog.html">Vlogs</a></li>
-      <li><a href="notas.html">Fundamentales</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="media/logo.png" alt="Logo" class="logo">
+      <h1>Uriel Cisneros Martínez</h1>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="blog.html">Vlogs</a></li>
+        <li><a href="notas.html">Fundamentales</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section>
-        <div class="panel" id="about">
-            <div>
-                <h1>Welcome my name is Jorge Uriel Cisneros Martinez</h1> <br>            
-                <h1>Back-End Developer</h1>
+  <!-- ABOUT -->
+  <section id="about">
+    <h1>Welcome, I'm Jorge Uriel Cisneros Martinez</h1>
+    <h1>Back-End Developer</h1>
 
-                <div class="redes-sociales">
-                    <a href="https://github.com/EncodeGeminis"><img src="media/logo_git_hub.png" alt=""></a>
-                    <a href="https://www.linkedin.com/in/jorge-uriel-cisneros-martinez-8104a3252/"><img
-                            src="media/logo_linked_in.png" alt=""></a>
-                    <a href="https://www.instagram.com/rx.blake?igsh=cTdqNm5lcXN5YTht"><img
-                            src="media/logo_instagram.png" alt=""></a>
-                </div>
+    <div class="redes-sociales">
+      <a href="https://github.com/EncodeGeminis"><img src="media/logo_git_hub.png" alt=""></a>
+      <a href="https://www.linkedin.com/in/jorge-uriel-cisneros-martinez-8104a3252/"><img src="media/logo_linked_in.png" alt=""></a>
+      <a href="https://www.instagram.com/rx.blake?igsh=cTdqNm5lcXN5YTht"><img src="media/logo_instagram.png" alt=""></a>
+    </div>
 
-                <h4>I am a developer with solid training in Computer Science. I focus on building functional, scalable
-                    and quality solutions,
-                    maintaining a modern design. Passionate about learning and solving problems through good programming
-                    and
-                    thinking practices
-                    analytical.</h4>
-            </div>
+    <h4>
+      I am a developer with solid training in Computer Science. 
+      I focus on building functional, scalable and quality solutions, maintaining a modern design. 
+      Passionate about learning and solving problems through good programming and analytical thinking practices.
+    </h4>
 
-            <div class="card-tecnologies">
-                <h1>Habilities</h1>
-                <div class="tecnologias">
+    <div class="card-tecnologies">
+      <h1>Skills</h1>
+      <div class="tecnologias">
+        <img src="media/logo_java.png" alt="">
+        <img src="media/logo_spring.png" alt="">
+        <img src="media/logo_html.png" alt="">
+        <img src="media/logo_js.png" alt="">
+        <img src="media/logo_mysql.png" alt="">
+        <img src="media/logo_bootstrap.png" alt="">
+        <img src="media/logo_git.png" alt="">
+      </div>
+    </div>
 
-                    <img src="media/logo_java.png" alt="">
-                    <img src="media/logo_spring.png" alt="">
-                    <img src="media/logo_html.png" alt="">
-                    <img src="media/logo_js.png" alt="">
-                    <img src="media/logo_mysql.png" alt="">
-                    <img src="media/logo_bootstrap.png" alt="">
-                    <img src="media/logo_git.png" alt="">
-                </div>
-            </div>
-            <div class="tecnologias">
-                <h1>Lenguages</h1>
-                <h4>Español - Nativo, Ingles - Intermedio</h4>
+    <div class="tecnologias">
+      <h1>Languages</h1>
+      <h4>Español - Nativo, Inglés - Intermedio</h4>
+    </div>
+  </section>
 
-            </div>
-        </div>
-        <h1 id="projects">My proyects</h1>
+  <section>
+    <h1 id="projects">My proyects</h1>
         <div class="container-projects">
 
             <div class="project-card">
@@ -106,8 +103,6 @@
 
             </div>
 
-            
-            
             <div class="project-card">
                 <h3 class="project-title">English web app</h3>
                 <div class="project-image" onclick="openCarousel('englishApp')">
@@ -166,7 +161,6 @@
 
         </div>
 
-        <!-- MODAL DEL CARRUSEL -->
         <div id="carousel-modal" class="carousel-modal hidden">
             <span class="close-btn" onclick="closeCarousel()">&times;</span>
             <img id="carousel-img" src="" alt="Imagen del proyecto" />
@@ -176,21 +170,17 @@
             </div>
         </div>
     </section>
+  </section>
 
-
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p>© 2025 Uriel Cisneros · Back-End Developer</p>
-            <div class="footer-links">
-                <a href="https://github.com/EncodeGeminis" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/jorge-uriel-cisneros-martinez-8104a3252/"
-                    target="_blank">LinkedIn</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-    
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>© 2025 Uriel Cisneros · Back-End Developer</p>
+      <div class="footer-links">
+        <a href="https://github.com/EncodeGeminis" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/jorge-uriel-cisneros-martinez-8104a3252/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
-
 </html>
