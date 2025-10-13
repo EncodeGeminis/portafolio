@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas de Repaso - Uriel Cisneros</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ======== CONTENIDO NOTAS ======== */
+    main {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      color: #eaeaea;
+    }
+
+    main h2 {
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #4c00ff;
+      padding-left: 10px;
+      color: #4c00ff;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    .card code {
+      display: block;
+      font-family: 'Courier New', monospace;
+      background-color: #0f2027;
+      color: #00ffff;
+      padding: 0.5rem;
+      border-radius: 6px;
+      margin-bottom: 0.8rem;
+      word-wrap: break-word;
+    }
+
+    .card p {
+      color: #cccccc;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="media/logo.png" alt="Logo" class="logo">
+      <h1>Notas de Repaso</h1>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#git">Git</a></li>
+        <li><a href="#java">Java</a></li>
+        <li><a href="#otros">Otros</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 🔹 Sección GIT -->
+    <section id="git">
+      <h2>💻 Comandos de Git más usados</h2>
+      <div class="cards-container">
+        <div class="card">
+          <code>git init</code>
+          <p>Inicia un repositorio nuevo en el directorio actual.</p>
+        </div>
+        <div class="card">
+          <code>git add .</code>
+          <p>Agrega todos los cambios al área de preparación (staging area).</p>
+        </div>
+        <div class="card">
+          <code>git commit -m "mensaje"</code>
+          <p>Guarda los cambios con un mensaje descriptivo.</p>
+        </div>
+        <div class="card">
+          <code>git push origin main</code>
+          <p>Envía tus commits al repositorio remoto en la rama <b>main</b>.</p>
+        </div>
+        <div class="card">
+          <code>git pull</code>
+          <p>Descarga y fusiona los cambios del repositorio remoto.</p>
+        </div>
+        <div class="card">
+          <code>git status</code>
+          <p>Muestra el estado actual del repositorio.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🔹 Sección JAVA -->
+    <section id="java">
+      <h2>☕ Conceptos clave de Java</h2>
+      <div class="cards-container">
+        <div class="card">
+          <code>List&lt;String&gt; lista = new ArrayList&lt;&gt;();</code>
+          <p>Estructura de datos ordenada que permite elementos duplicados.</p>
+        </div>
+        <div class="card">
+          <code>for (String item : lista) { ... }</code>
+          <p>Bucle mejorado <b>for-each</b> para recorrer colecciones.</p>
+        </div>
+        <div class="card">
+          <code>private String nombre;</code>
+          <p>Ejemplo de <b>encapsulación</b>: restringe el acceso a atributos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🔹 Sección OTROS -->
+    <section id="otros">
+      <h2>📚 Otros apuntes</h2>
+      <div class="cards-container">
+        <div class="card">
+          <code>ctrl + p</code>
+          <p>Visual Studio Code: abrir búsqueda rápida de archivos.</p>
+        </div>
+        <div class="card">
+          <code>ctrl + shift + f</code>
+          <p>VS Code: buscar en todo el proyecto.</p>
+        </div>
+        <div class="card">
+          <code>mvn clean install</code>
+          <p>Maven: limpia y recompila un proyecto Java con dependencias.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Uriel Cisneros Martínez</p>
+  </footer>
+</body>
+</html>

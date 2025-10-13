@@ -14,44 +14,63 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 3rem;
-    background-color: #1E2A78; /* Azul principal */
-    color: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+/* ==== HEADER GENERAL ==== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-header img {
-    height: 50px;
+/* ==== LOGO Y TÍTULO ==== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-header h1 {
-    font-weight: 700;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
 }
 
-nav ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
+.header h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    transition: all 0.3s ease;
+/* ==== NAVBAR ==== */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
-nav a:hover {
-    color: #FFD700; /* Amarillo fuerte para resaltar */
-    transform: scale(1.05);
+.navbar a {
+  text-decoration: none;
+  color: #ffffffcc;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
+
+.navbar a:hover {
+  color: #00ffff;
+  border-bottom: 2px solid #00ffff;
+}
+
 
 /* PANEL PRINCIPAL */
 .panel {
