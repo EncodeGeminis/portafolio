@@ -55,11 +55,16 @@ const carouselModal = document.getElementById("carousel-modal");
 const carouselImg = document.getElementById("carousel-img");
 
 /* 🔹 Abrir el carrusel */
-function openCarousel(projectName) {
-    currentProject = projectName;
-    currentIndex = 0;
-    carouselImg.src = imagesByProject[projectName][currentIndex];
-    carouselModal.classList.remove("hidden");
+function openCarousel(projectName, event) {
+  currentProject = projectName;
+  currentIndex = 0;
+  carouselImg.src = imagesByProject[projectName][currentIndex];
+
+  // 🔹 Ajustar la posición del modal según el scroll actual
+  const scrollY = window.scrollY || window.pageYOffset;
+  carouselModal.style.top = `${scrollY}px`;
+
+  carouselModal.classList.remove("hidden");
 }
 
 /* 🔹 Cerrar el carrusel */
@@ -99,3 +104,70 @@ document.addEventListener("keydown", (event) => {
 function toggleBlogList() {
     document.getElementById("blog-list").classList.toggle("hidden");
 }
+
+/* funcion del boton del modo oscuro*/
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+
+if (localStorage.getItem("theme") === "light") {
+  body.classList.add("light-mode");
+  themeToggle.textContent = "🌞";
+}
+
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("light-mode");
+  if (body.classList.contains("light-mode")) {
+    localStorage.setItem("theme", "light");
+    themeToggle.textContent = "🌞";
+  } else {
+    localStorage.setItem("theme", "dark");
+    themeToggle.textContent = "🌙";
+  }
+});
+
+// === Navegación entre modales con animaciones ===
+const modals = document.querySelectorAll('.modal');
+const navLinks = document.querySelectorAll('.navbar a[data-modal]');
+let currentModal = document.querySelector('.modal.active');
+
+// Función para abrir modales con animación
+function openModal(modalId) {
+  if (currentModal && currentModal.id === modalId) return; // evita recargar el mismo modal
+  
+  if (currentModal) {
+    // Animación de salida del modal actual
+    currentModal.classList.add('fade-out');
+    setTimeout(() => {
+      currentModal.classList.remove('active', 'fade-out');
+      showModal(modalId);
+    }, 400);
+  } else {
+    showModal(modalId);
+  }
+}
+
+function showModal(modalId) {
+  currentModal = document.getElementById(modalId);
+  if (currentModal) {
+    currentModal.classList.add('active', 'fade-in');
+    setTimeout(() => currentModal.classList.remove('fade-in'), 500);
+  }
+}
+
+// Escucha los clicks del menú
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const modalId = link.getAttribute('data-modal');
+    openModal(modalId);
+  });
+});
+
+// === Efecto inicial al cargar la página ===
+window.addEventListener('load', () => {
+  const homeModal = document.getElementById('home-modal');
+  if (homeModal) {
+    homeModal.classList.add('active', 'fade-in');
+    setTimeout(() => homeModal.classList.remove('fade-in'), 600);
+  }
+});

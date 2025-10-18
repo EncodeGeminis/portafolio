@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio - Uriel Cisneros</title>
-  <link rel="stylesheet" href="style.css">
-  
+  <link rel="stylesheet" href="style_principal.css">
+
 </head>
 
 <body>
@@ -17,160 +18,320 @@
     </div>
     <nav class="navbar">
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="blog.html">Vlogs</a></li>
-        <li><a href="notas.html">Fundamentales</a></li>
+        <li><a data-modal="about-modal" href="#">Acerca de</a></li>
+        <li><a data-modal="habilities-modal" href="#">Habilidades</a></li>
+        <li><a data-modal="projects-modal" href="#">Proyectos personales</a></li>
+        <li><a data-modal="contact-modal" href="#">Contactame</a></li>
+        <li><a href="notas.html">Mi Blog</a></li>
+        <li><a href="#">CV</a></li>
       </ul>
+      <button id="theme-toggle" class="theme-toggle">🌙</button>
     </nav>
   </header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h1>Welcome, I'm Jorge Uriel Cisneros Martinez</h1>
-    <h1>Back-End Developer</h1>
+  <!-- MODAL HOME -->
+  <div id="home-modal" class="modal active">
+    <div class="modal-content">
+      <h1>Hola, Soy <span class="highlight">Jorge Uriel Cisneros Martínez</span></h1>
+      <h2>Soy un desarrollador con experiencia en programación Back-End y Front-End</h2>
 
-    <div class="redes-sociales">
-      <a href="https://github.com/EncodeGeminis"><img src="media/logo_git_hub.png" alt=""></a>
-      <a href="https://www.linkedin.com/in/jorge-uriel-cisneros-martinez-8104a3252/"><img src="media/logo_linked_in.png" alt=""></a>
-      <a href="https://www.instagram.com/rx.blake?igsh=cTdqNm5lcXN5YTht"><img src="media/logo_instagram.png" alt=""></a>
+      <div class="redes-sociales">
+        <a href="https://github.com/EncodeGeminis"><img src="media/logo_git_hub.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/jorge-uriel-cisneros-martinez-8104a3252/"><img
+            src="media/logo_linked_in.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/rx.blake?igsh=cTdqNm5lcXN5YTht"><img src="media/logo_instagram.png"
+            alt="Instagram"></a>
+      </div>
+
+      <div class="card-tecnologies">
+        <h2>💻 Skills</h2>
+        <div class="tecnologias">
+          <div>
+            <img src="media/logo_java.png" alt="Java">
+            <h2>Java</h2>
+          </div>
+          <div>
+            <img src="media/logo_spring.png" alt="Spring">
+            <h2>Spring</h2>
+          </div>
+          <div>
+            <img src="media/logo_html.png" alt="HTML">
+            <h2>HTML</h2>
+          </div>
+          <div>
+            <img src="media/logo_js.png" alt="JavaScript">
+            <h2>Javacript</h2>
+          </div>
+          <div>
+            <img src="media/logo_mysql.png" alt="MySQL">
+            <h2>MySQL</h2>
+          </div>
+          <div>
+            <img src="media/logo_bootstrap.png" alt="Bootstrap">
+            <h2>Bootstrap</h2>
+          </div>
+          <div>
+            <img src="media/logo_git.png" alt="Git">
+            <h2>Git</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="idiomas">
+        <h2>🌎 Languages</h2>
+        <p>Español - Nativo</p>
+        <p>Inglés - Intermedio</p>
+      </div>
     </div>
+  </div>
 
-    <h4>
-      I am a developer with solid training in Computer Science. 
-      I focus on building functional, scalable and quality solutions, maintaining a modern design. 
-      Passionate about learning and solving problems through good programming and analytical thinking practices.
-    </h4>
+  <!-- MODAL ABOUT -->
+  <div id="about-modal" class="modal">
+    <div class="modal-content">
+      <h1>¿Quién es? <span class="highlight">Jorge Uriel Cisneros Martínez</span></h1>
+      <h2>soy un desarrollador apasionado por la programacion y la tecnologia</h2>
 
-    <div class="card-tecnologies">
-      <h1>Skills</h1>
-      <div class="tecnologias">
-        <img src="media/logo_java.png" alt="">
-        <img src="media/logo_spring.png" alt="">
-        <img src="media/logo_html.png" alt="">
-        <img src="media/logo_js.png" alt="">
-        <img src="media/logo_mysql.png" alt="">
-        <img src="media/logo_bootstrap.png" alt="">
-        <img src="media/logo_git.png" alt="">
+      <p class="intro-text">
+        Desarrollador Full-stack apasionado por crear software funcional, moderno y bien estructurado. Graduado en
+        Ciencias Computacionales, con experiencia en el uso de Spring, JPA, Firebase y tecnologías web como HTML, CSS y
+        JavaScript.
+
+        Disfruto transformar ideas en proyectos reales, optimizando procesos y aplicando soluciones inteligentes. Me
+        considero una persona analítica, autodidacta y con una fuerte orientación a la mejora continua. Actualmente
+        enfocado en fortalecer mis habilidades backend y contribuir en entornos colaborativos de desarrollo.</p>
+
+      <div class="idiomas">
+        <h2>Languages</h2>
+        <p>Español - Nativo</p>
+        <p>Inglés - Intermedio</p>
+      </div>
+
+      <button class="next-btn" onclick="openModal('projects-modal')">Ver proyectos →</button>
+    </div>
+  </div>
+
+  <!-- MODAL HABILITIES -->
+  <div id="habilities-modal" class="modal">
+    <div class="modal-content">
+      <h1>Habilidades <span class="highlight">y Herramientas</span></h1>
+
+      <h1>Estan son las habilidades <span class="highlight">y Tecnologias que uso actualmente</span></h1>
+
+
+      <div class="card-habilities">
+        <div class="tecnologias">
+          <div>
+            <img src="media/logo_java.png" alt="Java">
+            <h2>Java</h2>
+          </div>
+          <div>
+            <img src="media/logo_spring.png" alt="Spring">
+            <h2>Spring</h2>
+          </div>
+          <div>
+            <img src="media/logo_html.png" alt="HTML">
+            <h2>HTML</h2>
+          </div>
+          <div>
+            <img src="media/logo_js.png" alt="JavaScript">
+            <h2>Javacript</h2>
+          </div>
+          <div>
+            <img src="media/logo_mysql.png" alt="MySQL">
+            <h2>MySQL</h2>
+          </div>
+          <div>
+            <img src="media/logo_bootstrap.png" alt="Bootstrap">
+            <h2>Bootstrap</h2>
+          </div>
+          <div>
+            <img src="media/logo_git.png" alt="Git">
+            <h2>Git</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL PROJECTS -->
+  <div id="projects-modal" class="modal">
+    <div class="modal-content">
+      <h1>Mis proyectos</h1>
+      <div class="container-projects">
+
+        <div class="project-card">
+          <div class="project-left">
+            <h3 class="project-title">Crud Bancario con Spring</h3>
+            <p class="project-description">
+              Desarrollé una aplicación web utilizando Spring Framework con Hibernate para la gestión de empleados y
+              usuarios, conectada a una base de datos MySQL...
+            </p>
+            <div class="project-tags">
+              <span>Java</span>
+              <span>Springboot</span>
+              <span>MySQL</span>
+              <span>HTML/CSS</span>
+            </div>
+            <a href="https://github.com/EncodeGeminis/spring-crud">ver repositorio</a>
+          </div>
+          <div class="project-right">
+            <div class="project-image" onclick="openCarousel('spring', event)">
+              <img src="media/spring/crud_1.png" alt="spring">
+              <div class="image-overlay">ver más imágenes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-left">
+            <h3 class="project-title">App con Android studio</h3>
+            <p class="project-description">Desarrollé una aplicación móvil utilizando Android Studio con Java y
+              Firebase, que permite a los usuarios autenticarse y gestionar su información de manera interactiva. La
+              aplicación incluye funcionalidades para crear y almacenar notas, guardar información personal, visualizar
+              imágenes y reproducir música, así como un chat básico para interactuar con otros usuarios. La
+              implementación garantiza un manejo eficiente de datos en tiempo real y una experiencia de usuario fluida.
+            </p>
+            <div class="project-tags">
+              <span>Java</span>
+              <span>Firebase</span>
+            </div>
+             <a href="https://github.com/EncodeGeminis/ApiRest">ver repositorio</a>
+          </div>
+          <div class="project-right">
+            <div class="project-image" onclick="openCarousel('android', event)">
+              <img src="media/android/android_1.jpg" alt="proyecto1">
+              <div class="image-overlay">ver más imágenes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-left">
+            <h3 class="project-title">English web app</h3>
+            <p class="project-description">
+              Desarrollé una página web educativa para la visualización y repaso de los
+              temas fundamentales del idioma inglés, utilizando HTML, CSS y JavaScript. La aplicación incorpora
+              almacenamiento local con archivos JSON, permitiendo una gestión eficiente de los contenidos y una
+              experiencia de aprendizaje interactiva para los usuarios.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Javascript</span>
+              <span>JSON</span>
+            </div>
+            <a href="https://github.com/EncodeGeminis/EnglishWebApp">ver repositorio</a>
+          </div>
+          <div class="project-right">
+            <div class="project-image" onclick="openCarousel('englishApp', event)">
+              <img src="media/englishApp/english_1.png" alt="proyecto1">
+              <div class="image-overlay">ver más imágenes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-left">
+            <h3 class="project-title">Java projects</h3>
+            <p class="project-description">
+              Compilé una carpeta de ejemplos de código en Java, que incluye
+              implementaciones de conceptos y estructuras fundamentales del lenguaje. Este proyecto refleja mi
+              conocimiento práctico en programación orientada a objetos, manejo de estructuras de control, colecciones y
+              buenas prácticas en desarrollo Java..
+            </p>
+            <div class="project-tags">
+              <span>Java</span>
+            </div>
+            <a href="https://github.com/EncodeGeminis/JavaProjects">ver repositorio</a>
+          </div>
+          <div class="project-right">
+            <div class="project-image" onclick="openCarousel('javaProjects', event)">
+              <img src="media/java/java_1.png" alt="javaProjects">
+              <div class="image-overlay">ver más imágenes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-left">
+            <h3 class="project-title">Spring Security</h3>
+            <p class="project-description">
+              Desarrollé una aplicación web utilizando Spring Framework, Java, Thymeleaf y
+              Hibernate, enfocada en la seguridad y autenticación de usuarios mediante Spring Security. La aplicación
+              permite la asignación de roles de Administrador y Usuario, controlando el acceso a la gestión de empleados
+              y garantizando la protección de la información sensible.
+            </p>
+            <div class="project-tags">
+              <span>Java</span>
+              <span>Bootstrap</span>
+              <span>Springboot</span>
+              <span>Mysql</span>
+              <span>HTML/ CSS</span>
+            </div>
+            <a href="https://github.com/EncodeGeminis/SpringSecurity">ver repositorio</a>
+          </div>
+          <div class="project-right">
+            <div class="project-image" onclick="openCarousel('springSecurity', event)">
+              <img src="media/spring_security/spring_security_1.png" alt="proyecto1">
+              <div class="image-overlay">ver más imágenes</div>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <div id="carousel-modal" class="carousel-modal hidden">
+          <span class="close-btn" onclick="closeCarousel()">&times;</span>
+          <img id="carousel-img" src="" alt="Imagen del proyecto" />
+          <div class="carousel-controls">
+            <button onclick="prevImage()">←</button>
+            <button onclick="nextImage()">→</button>
+          </div>
+        </div>
+
+      
+        <button class="prev-btn" onclick="openModal('about-modal')">← Volver</button>
+      
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CONTACT-->
+<div id="contact-modal" class="modal">
+  <div class="modal-content contact-container">
+
+    <h1>📬 Contactame</h1>
+    <p>¿Tienes un proyecto en mente o deseas colaborar? Contáctame y estaré encantado de conversar.</p>
+
+    <div class="contact-info">
+      <div class="contact-item">
+        <img src="media/logo_mail.jpg" alt="Email">
+        <a href="mailto:urielc.developer@gmail.com">urielc.developer@gmail.com</a>
+      </div>
+
+      <div class="contact-item">
+        <img src="media/logo_linked_in.png" alt="LinkedIn">
+        <a href="https://www.linkedin.com/in/jorge-uriel-cisneros-martinez-8104a3252/" target="_blank">LinkedIn</a>
+      </div>
+
+      <div class="contact-item">
+        <img src="media/logo_git_hub.png" alt="GitHub">
+        <a href="https://github.com/EncodeGeminis" target="_blank">GitHub</a>
       </div>
     </div>
 
-    <div class="tecnologias">
-      <h1>Languages</h1>
-      <h4>Español - Nativo, Inglés - Intermedio</h4>
-    </div>
-  </section>
+    <form class="contact-form" action="mailto:urielc.developer@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="message" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
 
-  <section>
-    <h1 id="projects">My proyects</h1>
-        <div class="container-projects">
+    <button class="prev-btn" onclick="openModal('projects-modal')">← Volver</button>
+  </div>
+</div>
 
-            <div class="project-card">
-                <h3 class="project-title">Crud Bancario con Spring</h3>
-                <div class="project-image" onclick="openCarousel('spring')">
-                    <img src="media/spring/crud_1.png" alt="spring">
-                    <div class="image-overlay"> ver mas imagenes</div>
-                </div>
 
-                <p class="project-description">Desarrollé una aplicación web utilizando Spring Framework con Hibernate para la gestión de empleados y usuarios, conectada a una base de datos MySQL. La aplicación incluye tablas de datos dinámicas, filtros de búsqueda y paginación de información, optimizando el acceso y control de los datos de manera eficiente y segura.
-                </p>
-
-                <div class="project-tags">
-                    <span>Java</span>
-                    <span>Springboot</span>
-                    <span>Mysql</span>
-                    <span>HTML/ CSS</span>
-                </div>
-                <a href="https://github.com/EncodeGeminis/spring-crud">ver repositorio</a>
-
-            </div>
-            <div class="project-card">
-                <h3 class="project-title">App con Android studio</h3>
-                <div class="project-image" onclick="openCarousel('android')">
-                    <img src="media/android/android_1.jpg" alt="proyecto1">
-                    <div class="image-overlay"> ver mas imagenes</div>
-                </div>
-
-                <p class="project-description">Desarrollé una aplicación móvil utilizando Android Studio con Java y Firebase, que permite a los usuarios autenticarse y gestionar su información de manera interactiva. La aplicación incluye funcionalidades para crear y almacenar notas, guardar información personal, visualizar imágenes y reproducir música, así como un chat básico para interactuar con otros usuarios. La implementación garantiza un manejo eficiente de datos en tiempo real y una experiencia de usuario fluida.
-
-                </p>
-
-                <div class="project-tags">
-                    <span>Java</span>
-                    <span>Firebase</span>
-                </div>
-                <a href="https://github.com/EncodeGeminis/ApiRest">ver repositorio</a>
-
-            </div>
-
-            <div class="project-card">
-                <h3 class="project-title">English web app</h3>
-                <div class="project-image" onclick="openCarousel('englishApp')">
-                    <img src="media/englishApp/english_1.png" alt="proyecto1">
-                    <div class="image-overlay"> ver mas imagenes</div>
-                </div>
-
-                <p class="project-description">Desarrollé una página web educativa para la visualización y repaso de los temas fundamentales del idioma inglés, utilizando HTML, CSS y JavaScript. La aplicación incorpora almacenamiento local con archivos JSON, permitiendo una gestión eficiente de los contenidos y una experiencia de aprendizaje interactiva para los usuarios.
-                </p>
-
-                <div class="project-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Javascript</span>
-                    <span>JSON</span>
-                </div>
-                <a href="https://github.com/EncodeGeminis/EnglishWebApp">ver repositorio</a>
-
-            </div>
-
-            <div class="project-card">
-                <h3 class="project-title">Java projects</h3>
-                <div class="project-image" onclick="openCarousel('javaProjects')">
-                    <img src="media/java/java_1.png" alt="javaProjects">
-                    <div class="image-overlay"> ver mas imagenes</div>
-                </div>
-
-                <p class="project-description">Compilé una carpeta de ejemplos de código en Java, que incluye implementaciones de conceptos y estructuras fundamentales del lenguaje. Este proyecto refleja mi conocimiento práctico en programación orientada a objetos, manejo de estructuras de control, colecciones y buenas prácticas en desarrollo Java..</p>
-
-                <div class="project-tags">
-                    <span>Java</span>
-                </div>
-                <a href="https://github.com/EncodeGeminis/JavaProjects">ver repositorio</a>
-
-            </div>
-
-            <div class="project-card">
-                <h3 class="project-title">Spring Security</h3>
-                <div class="project-image" onclick="openCarousel('springSecurity')">
-                    <img src="media/spring_security/spring_security_1.png" alt="proyecto1">
-                    <div class="image-overlay"> ver mas imagenes</div>
-                </div>
-
-                <p class="project-description">Desarrollé una aplicación web utilizando Spring Framework, Java, Thymeleaf y Hibernate, enfocada en la seguridad y autenticación de usuarios mediante Spring Security. La aplicación permite la asignación de roles de Administrador y Usuario, controlando el acceso a la gestión de empleados y garantizando la protección de la información sensible.</p>
-
-                <div class="project-tags">
-                    <span>Java</span>
-                    <span>Bootstrap</span>
-                    <span>Springboot</span>
-                    <span>Mysql</span>
-                    <span>HTML/ CSS</span>
-                </div>
-                <a href="https://github.com/EncodeGeminis/SpringSecurity">ver repositorio</a>
-
-            </div>
-
-        </div>
-
-        <div id="carousel-modal" class="carousel-modal hidden">
-            <span class="close-btn" onclick="closeCarousel()">&times;</span>
-            <img id="carousel-img" src="" alt="Imagen del proyecto" />
-            <div class="carousel-controls">
-                <button onclick="prevImage()">←</button>
-                <button onclick="nextImage()">→</button>
-            </div>
-        </div>
-    </section>
-  </section>
 
   <footer class="site-footer">
     <div class="footer-content">
@@ -183,4 +344,5 @@
   </footer>
   <script src="script.js"></script>
 </body>
+
 </html>
