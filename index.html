@@ -354,23 +354,7 @@
   </footer>
 
   <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navbar = document.getElementById('navbar');
-    const navLinks = navbar.querySelectorAll('a');
-
-    // Abrir/cerrar menú
-    menuToggle.addEventListener('click', () => {
-      navbar.classList.toggle('active');
-      menuToggle.classList.toggle('open');
-    });
-
-    // Cerrar menú al hacer clic en un enlace
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navbar.classList.remove('active');
-        menuToggle.classList.remove('open');
-      });
-    });
+    
   </script>
 
   <script src="script.js"></script>
