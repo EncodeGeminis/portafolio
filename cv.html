@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Jorge Uriel Cisneros Martínez</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #222;
+      line-height: 1.6;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    header {
+      background: #1f2937;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+
+    header h2 {
+      margin: 0;
+      font-weight: 400;
+      font-size: 1.2em;
+      color: #a5b4fc;
+    }
+
+    .contact-info {
+      margin-top: 10px;
+      font-size: 0.95em;
+    }
+
+    .contact-info a {
+      color: #a5b4fc;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      border-left: 5px solid #4f46e5;
+      padding-left: 10px;
+      font-size: 1.3em;
+      color: #111827;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style-type: "• ";
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .btn-descargar {
+      display: inline-block;
+      background: #4f46e5;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      font-weight: 500;
+    }
+
+    .btn-descargar:hover {
+      background: #3730a3;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      main {
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jorge Uriel Cisneros Martínez</h1>
+    <h2>Desarrollador Backend | Especialista en Java & Spring Boot</h2>
+    <p class="contact-info">
+      Licenciado en Ciencias Computacionales<br>
+      <a href="mailto:urielc.developer@gmail.com">urielc.developer@gmail.com</a> | 7721261218<br>
+      <a href="https://encodegeminis.github.io/portafolio" target="_blank">https://encodegeminis.github.io/portafolio</a>
+    </p>
+    <a class="btn-descargar" href="https://raw.githubusercontent.com/EncodeGeminis/portafolio/main/media/Uriel_Cisneros_CV.pdf" download="Uriel_Cisneros_CV.pdf">
+  Descargar CV
+</a>
+  </header>
+
+  <main>
+    <section id="perfil">
+      <h3>Perfil Profesional</h3>
+      <p>
+        Desarrollador de sistemas informáticos con sólida formación en Ciencias Computacionales.
+        Me especializo en construir soluciones funcionales, escalables y con diseño moderno.
+        Apasionado por el aprendizaje continuo, la resolución de problemas y la aplicación de
+        buenas prácticas de programación con pensamiento analítico.
+      </p>
+    </section>
+
+    <section id="educacion">
+      <h3>Educación</h3>
+      <ul>
+        <li><strong>Licenciatura en Ciencias Computacionales</strong> – Universidad Autónoma del Estado de Hidalgo (2018–2022)</li>
+        <li><strong>Técnico en Informática</strong> – Centro Tecnológico Industrial y de Servicios No. 83 (2010–2013)</li>
+      </ul>
+    </section>
+
+    <section id="experiencia">
+      <h3>Experiencia Profesional</h3>
+      <ul>
+        <li><strong>UAEH – Programa Institucional de Asesorías Académicas (2021)</strong><br>
+          Gestión de documentos de alumnos con materias reprobadas para análisis académico.<br>
+          Diseño y edición de videos informativos para difusión institucional.
+        </li>
+        <li><strong>UAEH – Dirección de Bibliotecas y Centros de Información (2022)</strong><br>
+          Diseño e implementación de un chatbot administrativo.<br>
+          Coordinación de campaña de marketing institucional.
+        </li>
+      </ul>
+    </section>
+
+    <section id="habilidades-tecnicas">
+      <h3>Habilidades Técnicas</h3>
+      <ul>
+        <li><strong>Lenguajes:</strong> Java, C#, HTML, CSS, JavaScript, JSON, XML, MySQL</li>
+        <li><strong>Frameworks:</strong> Spring, Hibernate, JPA, Bootstrap, Angular</li>
+        <li><strong>Otros:</strong> Git, Firebase, Adobe Suite</li>
+      </ul>
+    </section>
+
+    <section id="habilidades-blandas">
+      <h3>Habilidades Blandas</h3>
+      <ul>
+        <li>Programación orientada a objetos</li>
+        <li>Desarrollo web y móvil</li>
+        <li>Capacidad analítica</li>
+        <li>Trabajo en equipo</li>
+        <li>Comunicación</li>
+        <li>Aprendizaje continuo</li>
+      </ul>
+    </section>
+
+    <section id="proyectos">
+      <h3>Proyectos</h3>
+      <ul>
+        <li><strong>Spring System:</strong> Aplicación web desarrollada con Spring Boot utilizando arquitectura MVC y API RESTful para gestión completa de datos (CRUD). Integra Spring Data JPA, Hibernate, autenticación con Spring Security y una interfaz con Thymeleaf, HTML, CSS y JavaScript.</li>
+        <li><strong>Mobile App:</strong> Aplicación móvil en Java con Firebase para autenticación y almacenamiento. Incluye chat entre usuarios, lista de notas, reproductor de música y galería de imágenes.</li>
+        <li><strong>Taller Gestor System:</strong> Sistema de escritorio en JavaFX con MySQL para la gestión de un taller de bicicletas (ventas, carrito de compras, historial e inventario).</li>
+        <li><strong>English Web:</strong> Página educativa construida con HTML, CSS y JavaScript. Usa JSON local para repaso de conceptos de inglés organizados por bloques temáticos.</li>
+        <li><strong>Logotipo:</strong> Diseño de logotipo e imagen corporativa con Illustrator y Photoshop, incluyendo materiales de propaganda.</li>
+      </ul>
+    </section>
+
+    <section id="idiomas">
+      <h3>Idiomas</h3>
+      <p>Español | Inglés Intermedio (B1)</p>
+    </section>
+  </main>
+</body>
+</html>
