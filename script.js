@@ -118,10 +118,10 @@ themeToggle.addEventListener("click", () => {
   body.classList.toggle("light-mode");
   if (body.classList.contains("light-mode")) {
     localStorage.setItem("theme", "light");
-    themeToggle.textContent = "🌞";
+    themeToggle.textContent = "🌙";
   } else {
     localStorage.setItem("theme", "dark");
-    themeToggle.textContent = "🌙";
+    themeToggle.textContent = "🌞";
   }
 });
 

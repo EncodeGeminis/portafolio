@@ -46,9 +46,8 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: rgba(15, 17, 22, 0.75);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(12px);
-    color: #007bff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
 }
@@ -83,7 +82,7 @@ a:hover {
 
 .navbar a {
     font-weight: 500;
-    color: #d1d5db;
+    color: #000000;
     transition: color 0.3s, transform 0.2s;
 }
 
@@ -100,12 +99,13 @@ a:hover {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #6657d7;
 }
 
 .tecnologias {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
     gap: 25px;
     justify-items: center;
 }
@@ -113,6 +113,7 @@ a:hover {
 .tecnologias>div {
     display: flex;
     flex-direction: column;
+    box-shadow:rgba(0, 0, 0, 0.05);
     align-items: center;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -165,7 +166,7 @@ a:hover {
 
 .redes-sociales {
     margin: 1.5rem 0;
-    background-color: #14171f;
+    background-color: #e7e7e7;
     padding: 10px;
     border-radius: 10px;
 }
@@ -174,6 +175,9 @@ a:hover {
     width: 38px;
     margin: 0 0.5rem;
     opacity: 0.85;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 16px;
     transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -207,8 +211,8 @@ a:hover {
     overflow-y: auto;
     z-index: 1000;
     margin-top: 80px;
-    background: radial-gradient(circle at 30% 20%, #1b1f2b, #0f1116);
-    color: #f9f9f9;
+    background: radial-gradient(circle at 30% 20%, #ffffff, #ffffff);
+    color: black;
     backdrop-filter: blur(15px);
     transition: opacity 0.5s ease, transform 0.6s ease;
     margin-top: 0;
@@ -236,16 +240,16 @@ a:hover {
     text-align: center;
     padding: 5rem 2rem;
     margin: auto;
-    /* evita que tape el header */
     animation: fadeInUp 0.7s ease;
 }
 .modal-content h1{
   font-size: 48px;
-  color: white;
+  color: black;
   margin: 0;
 }
 .modal-content .text-sub{
   font-size: 36px;
+  color: black;
   margin: 0;
 }
 .project-left h3{
@@ -344,7 +348,7 @@ a:hover {
 
 .project-description {
   color: #cfd2dc;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1rem;
 }
@@ -611,18 +615,18 @@ footer {
 
 /* ===== MODO CLARO ===== */
 body.light-mode {
-    background: #f7f9fc;
-    color: #1e1e1e;
+    background: rgba(15, 17, 22, 0.75);
+    color: white;
 }
 
 body.light-mode .header {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(15, 17, 22, 0.75);
     border-bottom: 1px solid #dfe3eb;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 body.light-mode .navbar a {
-    color: #333;
+    color: white;
 }
 
 body.light-mode .navbar a:hover {
@@ -630,14 +634,22 @@ body.light-mode .navbar a:hover {
 }
 
 body.light-mode .theme-toggle {
-    color: #1e1e1e;
+    color: #ffffff;
 }
 
 body.light-mode .modal {
-    background: radial-gradient(circle at 30% 20%, #ffffff, #e9eef5);
-    color: #1e1e1e;
+    background: radial-gradient(circle at 30% 20%, #232c37, #1b1b1b);
+    color: white;
 }
-
+body.light-mode .modal h1{
+    color: white;
+}
+body.light-mode .modal .text-sub{
+    color: white;
+}
+body.light-mode .redes-sociales{
+  background-color: #20202e;
+}
 /* === Efectos Fade In/Out para los modales === */
 .modal {
     opacity: 0;
