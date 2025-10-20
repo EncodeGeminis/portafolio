@@ -142,21 +142,24 @@ a:hover {
 
 .card-habilities {
     display: flex;
-    background-color: #1f2333;
+    background-color: #3e4664;
     padding: 100px;
     border-radius: 26px;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.5rem;
-    margin-top: 1rem;
 }
 
 .card-habilities img {
     width: 100px;
     border-radius: 26px;
     padding: 5px;
+    margin: 0;
     filter: grayscale(0.2);
     transition: transform 0.3s, filter 0.3s;
+}
+.card-habilities h2 {
+  color: white;
 }
 
 .tecnologias img:hover {
@@ -243,7 +246,7 @@ a:hover {
     animation: fadeInUp 0.7s ease;
 }
 .modal-content h1{
-  font-size: 48px;
+  font-size: 24px;
   color: black;
   margin: 0;
 }
@@ -305,8 +308,9 @@ a:hover {
   flex-direction: column;
   gap: 2.5rem;
   max-width: 1200px;
-  padding: 6rem 3rem 2rem;
+  padding: 1rem 8rem 2rem;
   background-color: #007bff;
+  border-radius: 26px;
   margin: auto;
 }
 
@@ -321,6 +325,26 @@ a:hover {
   border: 1px solid #2c2f38;
   transition: transform 0.25s ease, box-shadow 0.3s ease;
   gap: 2rem;
+}
+.habilities-card{
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(3, 100px);
+  width: 100%;
+  gap: 50px;
+}
+.habilities-card div {
+      border-radius: 15px;
+      display: flex;
+      
+      justify-content: space-around;
+      align-items:center;
+      transition: transform 0.3s ease, box-shadow 0.5s ease;
+    }
+.habilities-card div img {
+  width: 100px;
+  height: 100px;
+
 }
 
 .project-card:hover {
@@ -360,7 +384,7 @@ a:hover {
 .project-tags span {
   display: inline-block;
   background: #2c303a;
-  color: #9ca3af;
+  color: #ddc90f;
   border-radius: 8px;
   padding: 0.3rem 0.8rem;
   margin: 0.2rem 0.3rem 0 0;
