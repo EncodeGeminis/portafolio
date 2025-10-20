@@ -43,7 +43,7 @@ a:hover {
     width: 100%;
     z-index: 2000;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem 2rem;
     background: rgba(255, 255, 255, 0.75);
@@ -650,6 +650,109 @@ body.light-mode .modal .text-sub{
 body.light-mode .redes-sociales{
   background-color: #20202e;
 }
+
+/* ======= MENÚ HAMBURGUESA ======= */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  gap: 6px;
+  z-index: 3000;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animación al abrir/cerrar */
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ======= MENÚ LATERAL ======= */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100vh;
+    background: rgba(15, 15, 25, 0.96);
+    backdrop-filter: blur(14px);
+    box-shadow: -4px 0 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.5s ease, opacity 0.4s ease;
+    opacity: 0;
+    z-index: 2500;
+  }
+
+  .navbar.active {
+    right: 0;
+    opacity: 1;
+  }
+
+  /* Animación sutil de entrada */
+  .navbar ul {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .navbar.active ul {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .navbar a {
+    color: #eaeaea;
+    font-size: 1.2rem;
+    transition: color 0.3s, transform 0.2s;
+  }
+
+  .navbar a:hover {
+    color: #7c4dff;
+    transform: scale(1.05);
+  }
+
+  /* Mostrar ícono */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Ajustes header en móvil */
+  .header {
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+  }
+
+  main {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* === Efectos Fade In/Out para los modales === */
 .modal {
     opacity: 0;
