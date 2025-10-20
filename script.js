@@ -36,7 +36,7 @@ const imagesByProject = {
         "media/spring/crud_10.png"
     ],
     android: [
-        "media/android/android_1.jpg",
+        "media/android/android_1.png",
         "media/android/android_2.jpeg",
         "media/android/android_3.jpeg",
         "media/android/android_4.jpg",

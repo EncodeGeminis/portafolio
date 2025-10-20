@@ -213,21 +213,43 @@ a:hover {
     transition: opacity 0.5s ease, transform 0.6s ease;
     margin-top: 0;
 }
+.modal-content h1{
+  font-size: 36px;
+}
 
 .modal.active {
     display: flex;
     opacity: 1;
+    margin-top: 40px;
     transform: translateY(0);
+}
+.image-overlay{
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px;
+  margin: 0;
 }
 
 .modal-content {
-    max-width: 1000px;
+    max-width: 1500px;
     width: 90%;
     text-align: center;
     padding: 5rem 2rem;
     margin: auto;
     /* evita que tape el header */
     animation: fadeInUp 0.7s ease;
+}
+.modal-content h1{
+  font-size: 48px;
+  color: white;
+  margin: 0;
+}
+.modal-content .text-sub{
+  font-size: 36px;
+  margin: 0;
+}
+.project-left h3{
+  font-size: 36px;
 }
 
 @keyframes fadeInUp {
@@ -287,9 +309,10 @@ a:hover {
 .project-card {
   display: flex;
   flex-direction: row;
-  background: #1a1d26;
+  background: #404246;
   border-radius: 16px;
   padding: 1.5rem;
+  padding-bottom: 100px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border: 1px solid #2c2f38;
   transition: transform 0.25s ease, box-shadow 0.3s ease;
