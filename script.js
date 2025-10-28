@@ -1,51 +1,51 @@
 const imagesByProject = {
-    proyecto1: [
-        "media/icon_default_2.png",
-        "media/icon_default_3.png"
-    ],
-    proyecto2: [
-        "media/icon_default_2.png",
-        "media/icon_default_3.png"
-    ],
-    englishApp: [
-        "media/englishApp/english_1.png",
-        "media/englishApp/english_2.png",
-        "media/englishApp/english_3.png",
-        "media/englishApp/english_4.png",
-        "media/englishApp/english_5.png"
-    ],
-    javaProjects: [
-        "media/java/java_1.png",
-        "media/java/java_2.png",
-        "media/java/java_3.png"
-    ],
-    springSecurity: [
-        "media/spring_security/spring_security_1.png",
-        "media/spring_security/spring_security_2.png"
-    ],
-    spring: [
-        "media/spring/crud_1.png",
-        "media/spring/crud_2.png",
-        "media/spring/crud_3.png",
-        "media/spring/crud_4.png",
-        "media/spring/crud_5.png",
-        "media/spring/crud_6.png",
-        "media/spring/crud_7.png",
-        "media/spring/crud_8.png",
-        "media/spring/crud_9.png",
-        "media/spring/crud_10.png"
-    ],
-    android: [
-        "media/android/android_monitor.png",
-        "media/android/android_2.jpeg",
-        "media/android/android_3.jpeg",
-        "media/android/android_4.jpg",
-        "media/android/android_5.jpg",
-        "media/android/android_6.jpg",
-        "media/android/android_10.jpg",
-        "media/android/android_8.jpeg",
-        "media/android/android_9.jpg"
-    ]
+  proyecto1: [
+    "media/icon_default_2.png",
+    "media/icon_default_3.png"
+  ],
+  proyecto2: [
+    "media/icon_default_2.png",
+    "media/icon_default_3.png"
+  ],
+  englishApp: [
+    "media/englishApp/english_1.png",
+    "media/englishApp/english_2.png",
+    "media/englishApp/english_3.png",
+    "media/englishApp/english_4.png",
+    "media/englishApp/english_5.png"
+  ],
+  javaProjects: [
+    "media/java/java_1.png",
+    "media/java/java_2.png",
+    "media/java/java_3.png"
+  ],
+  springSecurity: [
+    "media/spring_security/spring_security_1.png",
+    "media/spring_security/spring_security_2.png"
+  ],
+  spring: [
+    "media/spring/crud_1.png",
+    "media/spring/crud_2.png",
+    "media/spring/crud_3.png",
+    "media/spring/crud_4.png",
+    "media/spring/crud_5.png",
+    "media/spring/crud_6.png",
+    "media/spring/crud_7.png",
+    "media/spring/crud_8.png",
+    "media/spring/crud_9.png",
+    "media/spring/crud_10.png"
+  ],
+  android: [
+    "media/android/android_monitor.png",
+    "media/android/android_2.jpeg",
+    "media/android/android_3.jpeg",
+    "media/android/android_4.jpg",
+    "media/android/android_5.jpg",
+    "media/android/android_6.jpg",
+    "media/android/android_10.jpg",
+    "media/android/android_8.jpeg",
+    "media/android/android_9.jpg"
+  ]
 };
 
 let currentProject = "";
@@ -69,40 +69,40 @@ function openCarousel(projectName, event) {
 
 /* 🔹 Cerrar el carrusel */
 function closeCarousel() {
-    carouselModal.classList.add("hidden");
+  carouselModal.classList.add("hidden");
 }
 
 /* 🔹 Navegación entre imágenes */
 function nextImage() {
-    const images = imagesByProject[currentProject];
-    currentIndex = (currentIndex + 1) % images.length;
-    carouselImg.src = images[currentIndex];
+  const images = imagesByProject[currentProject];
+  currentIndex = (currentIndex + 1) % images.length;
+  carouselImg.src = images[currentIndex];
 }
 
 function prevImage() {
-    const images = imagesByProject[currentProject];
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    carouselImg.src = images[currentIndex];
+  const images = imagesByProject[currentProject];
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  carouselImg.src = images[currentIndex];
 }
 
 /* 🔹 Cerrar al hacer clic fuera de la imagen */
 carouselModal.addEventListener("click", (event) => {
-    // Si el clic fue directamente sobre el fondo (no en la imagen ni en botones)
-    if (event.target === carouselModal) {
-        closeCarousel();
-    }
+  // Si el clic fue directamente sobre el fondo (no en la imagen ni en botones)
+  if (event.target === carouselModal) {
+    closeCarousel();
+  }
 });
 
 /* 🔹 (Opcional) cerrar con tecla ESC */
 document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !carouselModal.classList.contains("hidden")) {
-        closeCarousel();
-    }
+  if (event.key === "Escape" && !carouselModal.classList.contains("hidden")) {
+    closeCarousel();
+  }
 });
 
 /* 🔹 Alternar lista del blog */
 function toggleBlogList() {
-    document.getElementById("blog-list").classList.toggle("hidden");
+  document.getElementById("blog-list").classList.toggle("hidden");
 }
 
 /* funcion del boton del modo oscuro*/
@@ -133,7 +133,7 @@ let currentModal = document.querySelector('.modal.active');
 // Función para abrir modales con animación
 function openModal(modalId) {
   if (currentModal && currentModal.id === modalId) return; // evita recargar el mismo modal
-  
+
   if (currentModal) {
     // Animación de salida del modal actual
     currentModal.classList.add('fade-out');
@@ -173,19 +173,64 @@ window.addEventListener('load', () => {
 });
 
 const menuToggle = document.getElementById('menu-toggle');
-    const navbar = document.getElementById('navbar');
-    const menuLinks = navbar.querySelectorAll('a');
+const navbar = document.getElementById('navbar');
+const menuLinks = navbar.querySelectorAll('a');
 
-    // Abrir/cerrar menú
-    menuToggle.addEventListener('click', () => {
-      navbar.classList.toggle('active');
-      menuToggle.classList.toggle('open');
-    });
+// Abrir/cerrar menú
+menuToggle.addEventListener('click', () => {
+  navbar.classList.toggle('active');
+  menuToggle.classList.toggle('open');
+});
 
-    // Cerrar menú al hacer clic en un enlace
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navbar.classList.remove('active');
-        menuToggle.classList.remove('open');
-      });
-    });
+// Cerrar menú al hacer clic en un enlace
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navbar.classList.remove('active');
+    menuToggle.classList.remove('open');
+  });
+});
+
+document.getElementById('btnContact').addEventListener('click', () => {
+  openModal('contact-modal');
+});
+
+/* animacion de typewritter */
+const texts = [
+  "Backend",
+  "Frontend",
+  "Desarrollo mobile ",
+  "Diseño grafico"
+];
+
+const typingText = document.getElementById("typing-text");
+let textIndex = 0;
+let charIndex = 0;
+let typingSpeed = 100;
+let erasingSpeed = 50;
+let delayBetweenTexts = 1500;
+
+function type() {
+  if (charIndex < texts[textIndex].length) {
+    typingText.textContent += texts[textIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingSpeed);
+  } else {
+    setTimeout(erase, delayBetweenTexts);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    typingText.textContent = texts[textIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, erasingSpeed);
+  } else {
+    textIndex = (textIndex + 1) % texts.length;
+    setTimeout(type, typingSpeed);
+  }
+}
+
+// Inicia el typewriter
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(type, 1000); // pequeño delay inicial
+});

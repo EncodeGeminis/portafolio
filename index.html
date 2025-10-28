@@ -13,86 +13,96 @@
   <!-- HEADER -->
   <header class="header">
     <div class="logo-container">
-       <!-- Ícono menú móvil -->
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+      <!-- Ícono menú móvil -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <img src="media/icon_logo.png" alt="Logo" class="logo">
       <h1>Portafolio</h1>
     </div>
     <nav class="navbar" id="navbar">
       <ul>
+        <li><a data-modal="home-modal" href="#">Inicio</a></li>
         <li><a data-modal="about-modal" href="#">Acerca de</a></li>
         <li><a data-modal="habilities-modal" href="#">Habilidades</a></li>
         <li><a data-modal="projects-modal" href="#">Proyectos personales</a></li>
-        <li><a data-modal="contact-modal" href="#">Contactame</a></li>
         <li><a href="notas.html">Mi Blog</a></li>
         <li><a href="cv.html">CV</a></li>
         <li><button id="theme-toggle" class="theme-toggle">🌞</button></li>
 
       </ul>
-      
+
     </nav>
   </header>
 
   <!-- MODAL HOME -->
   <div id="home-modal" class="modal active">
     <div class="modal-content">
-      
-      <div class="redes-sociales">
-        <a href="https://github.com/EncodeGeminis"><img src="media/logo_git_hub.png" alt="GitHub"></a>
-        <a href="https://www.linkedin.com/in/jorge-uriel-cisneros-martinez-8104a3252/"><img
-            src="media/logo_linked_in.png" alt="LinkedIn"></a>
-        <a href="https://www.instagram.com/rx.blake?igsh=cTdqNm5lcXN5YTht"><img src="media/logo_instagram.png"
-            alt="Instagram"></a>
-      </div>
+      <div class="home">
+        <div class="card-left">
+          <div class="superior">
+            <img src="media/icon_logo.png" alt="Logo GI Solutions" class="avatar">
+            <h1>Jorge Uriel C Mtz</h1>
+            <h2>Developer & Web Designer</h2>
+          </div>
+          <div class="inferior">
+            <div class="redes-sociales">
+              <a href="#"><img src="media/logo_git_hub.png" alt="GitHub"></a>
+              <a href="#"><img src="media/logo_linked_in.png" alt="LinkedIn"></a>
+              <a href="#"><img src="media/logo_instagram.png" alt="Instagram"></a>
+            </div>
+            <div class="idiomas">
+              <h2>🌎 Languages</h2>
+              <p>Español - Nativo</p>
+              <p>Inglés - Intermedio</p>
+            </div>
+          </div>
 
-      <h1>Hola, Soy <span class="highlight">Jorge Uriel Cisneros Martínez</span></h1>
-      <h2 class="text-sub">Soy un desarrollador </h2>
-      <h2 class="text-sub">con experiencia en programación</h2>
-      <h2 class="text-sub">Back-End y Front-End</h2>
+        </div>
+        <div class="card-right">
 
+          <h1>Hola, Soy <span class="highlight">Jorge Uriel Cisneros Martínez</span></h1>
+          <h2 class="text-sub">Desarrollador </h2>
+          <h2 class="text-sub">con experiencia en: <span class=" text-sub typing" id="typing-text"></span> </h2> 
 
-      <div class="card-tecnologies">
-        <div class="tecnologias">
-          <div>
-            <img src="media/logo_java.png" alt="Java">
-            <h2>Java</h2>
+          <div class="card-tecnologies">
+            <div class="tecnologias">
+              <div>
+                <img src="media/logo_java.png" alt="Java">
+                <h2>Java</h2>
+              </div>
+              <div>
+                <img src="media/logo_spring.png" alt="Spring">
+                <h2>Spring</h2>
+              </div>
+              <div>
+                <img src="media/logo_html.png" alt="HTML">
+                <h2>HTML</h2>
+              </div>
+              <div>
+                <img src="media/logo_js.png" alt="JavaScript">
+                <h2>Javacript</h2>
+              </div>
+              <div>
+                <img src="media/logo_mysql.png" alt="MySQL">
+                <h2>MySQL</h2>
+              </div>
+              <div>
+                <img src="media/logo_bootstrap.png" alt="Bootstrap">
+                <h2>Bootstrap</h2>
+              </div>
+              <div>
+                <img src="media/logo_git.png" alt="Git">
+                <h2>Git</h2>
+              </div>
+            </div>
           </div>
-          <div>
-            <img src="media/logo_spring.png" alt="Spring">
-            <h2>Spring</h2>
-          </div>
-          <div>
-            <img src="media/logo_html.png" alt="HTML">
-            <h2>HTML</h2>
-          </div>
-          <div>
-            <img src="media/logo_js.png" alt="JavaScript">
-            <h2>Javacript</h2>
-          </div>
-          <div>
-            <img src="media/logo_mysql.png" alt="MySQL">
-            <h2>MySQL</h2>
-          </div>
-          <div>
-            <img src="media/logo_bootstrap.png" alt="Bootstrap">
-            <h2>Bootstrap</h2>
-          </div>
-          <div>
-            <img src="media/logo_git.png" alt="Git">
-            <h2>Git</h2>
-          </div>
+
         </div>
       </div>
 
-      <div class="idiomas">
-        <h2>🌎 Languages</h2>
-        <p>Español - Nativo</p>
-        <p>Inglés - Intermedio</p>
-      </div>
     </div>
   </div>
 
@@ -110,12 +120,6 @@
         Disfruto transformar ideas en proyectos reales, optimizando procesos y aplicando soluciones inteligentes. Me
         considero una persona analítica, autodidacta y con una fuerte orientación a la mejora continua. Actualmente
         enfocado en fortalecer mis habilidades backend y contribuir en entornos colaborativos de desarrollo.</p>
-
-      <div class="idiomas">
-        <h2>Languages</h2>
-        <p>Español - Nativo</p>
-        <p>Inglés - Intermedio</p>
-      </div>
 
       <button class="next-btn" onclick="openModal('projects-modal')">Ver proyectos →</button>
     </div>
@@ -152,16 +156,16 @@
             <h2>HTML5</h2>
           </div>
           <div>
-            <img src="media/icons/iconCSS3.png" >
+            <img src="media/icons/iconCSS3.png">
             <h2>Javacript</h2>
           </div>
           <div>
-            <img src="media/icons/iconJS.png" >
+            <img src="media/icons/iconJS.png">
             <h2>MySQL</h2>
           </div>
           <div>
             <img src="media/icons/iconJQuery.png">
-            <h2>Bootstrap</h2>
+            <h2>JQuery</h2>
           </div>
           <div>
             <img src="media/icons/iconGit.png" alt="Git">
@@ -229,7 +233,7 @@
               <span>Java</span>
               <span>Firebase</span>
             </div>
-             <a href="https://github.com/EncodeGeminis/ApiRest">ver repositorio</a>
+            <a href="https://github.com/EncodeGeminis/ApiRest">ver repositorio</a>
           </div>
           <div class="project-right">
             <div class="project-image" onclick="openCarousel('android', event)">
@@ -312,7 +316,7 @@
           </div>
         </div>
 
-        
+
 
         <div id="carousel-modal" class="carousel-modal hidden">
           <span class="close-btn" onclick="closeCarousel()">&times;</span>
@@ -323,49 +327,46 @@
           </div>
         </div>
 
-      
+
         <button class="prev-btn" onclick="openModal('about-modal')">← Volver</button>
-      
+
       </div>
     </div>
   </div>
 
   <!-- MODAL CONTACT-->
-<div id="contact-modal" class="modal">
-  <div class="modal-content contact-container">
+  <div id="contact-modal" class="modal">
+    <div class="modal-content contact-container">
 
-    <h1>📬 Contactame</h1>
-    <p>¿Tienes un proyecto en mente o deseas colaborar? Contáctame y estaré encantado de conversar.</p>
+      <h1>📬 Contactame</h1>
+      <p>estaré encantado de conversar.</p>
 
-    <div class="contact-info">
-      <div class="contact-item">
-        <img src="media/logo_mail.jpg" alt="Email">
-        <a href="mailto:urielc.developer@gmail.com">urielc.developer@gmail.com</a>
+      <div class="contact-info">
+
+        <div class="contact-item">
+          <img src="media/logo_linked_in.png" alt="LinkedIn">
+          <a href="https://www.linkedin.com/in/jorge-uriel-cisneros-martinez-8104a3252/" target="_blank">LinkedIn</a>
+        </div>
+
+        <div class="contact-item">
+          <img src="media/logo_git_hub.png" alt="GitHub">
+          <a href="https://github.com/EncodeGeminis" target="_blank">GitHub</a>
+        </div>
       </div>
 
-      <div class="contact-item">
-        <img src="media/logo_linked_in.png" alt="LinkedIn">
-        <a href="https://www.linkedin.com/in/jorge-uriel-cisneros-martinez-8104a3252/" target="_blank">LinkedIn</a>
-      </div>
+      <form class="contact-form" action="mailto:urielc.developer@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+        <textarea name="message" placeholder="Escribe tu mensaje..." required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
 
-      <div class="contact-item">
-        <img src="media/logo_git_hub.png" alt="GitHub">
-        <a href="https://github.com/EncodeGeminis" target="_blank">GitHub</a>
-      </div>
+      <button class="prev-btn" onclick="openModal('home-modal')">← Volver</button>
     </div>
-
-    <form class="contact-form" action="mailto:urielc.developer@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo electrónico" required>
-      <textarea name="message" placeholder="Escribe tu mensaje..." required></textarea>
-      <button type="submit">Enviar mensaje</button>
-    </form>
-
-    <button class="prev-btn" onclick="openModal('projects-modal')">← Volver</button>
   </div>
-</div>
 
-
+  <!-- Botón flotante de contactame -->
+  <button id="btnContact" class="floating-btn">Contáctame</button>
 
   <footer class="site-footer">
     <div class="footer-content">
@@ -376,10 +377,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    
-  </script>
 
   <script src="script.js"></script>
 </body>

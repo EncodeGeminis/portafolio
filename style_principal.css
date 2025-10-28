@@ -41,7 +41,7 @@ a:hover {
     color: #82c3ff;
 }
 
-/* ======= HEADER ======= */
+/*  HEADER  */
 .header {
     position: fixed;
     top: 0;
@@ -97,6 +97,91 @@ a:hover {
     transform: translateY(-2px);
 }
 
+/* modal principal */
+.home{
+  display: flex;
+  flex-direction: row;
+}
+/*  IZQUIERDA  */
+.card-left {
+  text-align: center;
+  background: linear-gradient(145deg, #3a86ff, #8338ec);
+  border-radius: 20px;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 5px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+.card-left h1 {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+.card-left h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #e0e0e0;
+}
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 16px;
+  padding: 10px;
+}
+.redes-sociales img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+.redes-sociales img:hover {
+  transform: scale(1.2);
+}
+
+/*  DERECHA  */
+.card-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.card-right h1 {
+  font: 2.5rem;
+}
+.card-right h2 {
+  font-size: 2rem;
+  color: #4cc9f0;
+  margin-bottom: 1rem;
+}
+.card-right p {
+  line-height: 1.8;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+/*  RESPONSIVE  */
+@media (max-width: 900px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .card-right {
+    text-align: center;
+  }
+  .btn-contact {
+    align-self: center;
+  }
+}
+
 .card-tecnologies {
     margin: 40px 0;
 }
@@ -116,13 +201,15 @@ a:hover {
     justify-items: center;
 }
 
-.tecnologias>div {
+.tecnologias div {
     display: flex;
     flex-direction: column;
     box-shadow:rgba(0, 0, 0, 0.05);
     align-items: center;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    padding: 10px;
+    border-radius: 16px;
     cursor: default;
 }
 
@@ -136,12 +223,12 @@ a:hover {
 .tecnologias h2 {
     font-size: 1rem;
     font-weight: 500;
-    color: #555;
+    color: #2c1b6b;
 }
 
-.tecnologias>div:hover {
+.tecnologias div:hover {
     transform: scale(1.15);
-    filter: grayscale(0);
+    filter: grayscale(0.2);
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -168,33 +255,6 @@ a:hover {
   color: white;
 }
 
-.tecnologias img:hover {
-    transform: scale(1.15);
-    filter: grayscale(0);
-}
-
-.redes-sociales {
-    margin: 1.5rem 0;
-    background-color: #e7e7e7;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.redes-sociales img {
-    width: 38px;
-    margin: 0 0.5rem;
-    opacity: 0.85;
-    background-color: #000000;
-    padding: 10px;
-    border-radius: 16px;
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-.redes-sociales img:hover {
-    transform: scale(1.1);
-    opacity: 1;
-}
-
 /* Botón del modo oscuro/claro */
 .theme-toggle {
     background: none;
@@ -209,7 +269,7 @@ a:hover {
     transform: rotate(15deg) scale(1.1);
 }
 
-/* ======= MODALES ======= */
+/*  MODALES  */
 .modal {
     position:relative;
     inset: 0;
@@ -225,9 +285,6 @@ a:hover {
     backdrop-filter: blur(15px);
     transition: opacity 0.5s ease, transform 0.6s ease;
     margin-top: 0;
-}
-.modal-content h1{
-  font-size: 36px;
 }
 
 .modal.active {
@@ -252,13 +309,13 @@ a:hover {
     animation: fadeInUp 0.7s ease;
 }
 .modal-content h1{
-  font-size: 24px;
+  font-size: 48px;
   color: black;
   margin: 0;
 }
 .modal-content .text-sub{
-  font-size: 36px;
-  color: black;
+  font-size: 26px;
+  color: rgb(93, 93, 93);
   margin: 0;
 }
 .project-left h3{
@@ -449,7 +506,7 @@ a:hover {
 
 /* Contacto */
 .contact-container {
-  max-width: 700px;
+  max-width: 500px;
   margin: 5vh auto;
   padding: 3rem;
   background: linear-gradient(145deg, #1f2233, #181a27);
@@ -461,24 +518,25 @@ a:hover {
 }
 
 .contact-container h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #4da3ff;
   margin-bottom: 1rem;
 }
 
 .contact-container p {
   color: #cfd2dc;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 1.05rem;
 }
 
 /* Información de contacto */
 .contact-info {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
   align-items: center;
-  margin-bottom: 2.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .contact-item {
@@ -490,7 +548,6 @@ a:hover {
 .contact-item img {
   width: 35px;
   height: 35px;
-  filter: brightness(0) invert(1);
 }
 
 .contact-item a {
@@ -683,6 +740,28 @@ body.light-mode .modal .text-sub{
 }
 body.light-mode .redes-sociales{
   background-color: #20202e;
+}
+
+.floating-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(90deg, #3a86ff, #8338ec);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(76,201,240,0.4);
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    z-index: 1000;
+}
+
+.floating-btn:hover {
+    background: #4361ee;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(76,201,240,0.6);
 }
 
 /* ======= MENÚ HAMBURGUESA ======= */
